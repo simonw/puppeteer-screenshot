@@ -1,11 +1,11 @@
 {
   "name": "puppeteer-screenshot",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Take screenshot of a website",
   "private": true,
   "license": "MIT",
   "dependencies": {
-    "chrome-aws-lambda": "1.11.1",
-    "puppeteer-core": "1.11.0"
+    "chrome-aws-lambda": "5.2.1",
+    "puppeteer-core": "5.2.1"
   }
 }
