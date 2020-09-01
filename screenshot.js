@@ -25,12 +25,14 @@ module.exports = async function (req, res) {
         const { type = 'png', quality, fullPage } = query;
         const url = getUrlFromPath(pathname);
         const qual = getInt(quality);
+        let viewportWidth = parseInt(req.query.viewportWidth || '800');
+        let viewportHeight = parseInt(req.query.viewportHeight || '600');
         if (!isValidUrl(url)) {
             res.statusCode = 400;
             res.setHeader('Content-Type', 'text/html');
             res.end(`<h1>Bad Request</h1><p>The url <em>${url}</em> is not valid.</p>`);
         } else {
-            const file = await getScreenshot(url, type, qual, fullPage);
+            const file = await getScreenshot(url, type, qual, fullPage, viewportWidth, viewportHeight);
             res.statusCode = 200;
             res.setHeader('Content-Type', `image/${type}`);
             res.end(file);
