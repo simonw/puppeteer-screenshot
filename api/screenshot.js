@@ -1,7 +1,7 @@
 const { parse } = require('url');
 const { timingSafeEqual } = require('crypto');
-const { getScreenshot } = require('./chromium');
-const { getInt, getUrlFromPath, isValidUrl } = require('./validator');
+const { getScreenshot } = require('../chromium');
+const { getInt, getUrlFromPath, isValidUrl } = require('../validator');
 
 const SECRET_KEY = process.env.SECRET_KEY;
 

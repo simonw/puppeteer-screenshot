@@ -5,7 +5,7 @@
   "private": true,
   "license": "MIT",
   "dependencies": {
-    "chrome-aws-lambda": "5.2.1",
-    "puppeteer-core": "5.2.1"
+    "chrome-aws-lambda": "10.1.0",
+    "puppeteer-core": "14.1.1"
   }
 }

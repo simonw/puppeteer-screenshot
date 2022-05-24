@@ -1,0 +1,12 @@
+{
+  "functions": {
+    "api/screenshot.js": {
+      "memory": 1024
+    }
+  },
+  "rewrites": [
+    { "source": "/", "destination": "/public/index.html" },
+    { "source": "/favicon.ico", "destination": "/public/favicon.ico" },
+    { "source": "/(.+)", "destination": "/api/screenshot.js" }
+  ]
+}
